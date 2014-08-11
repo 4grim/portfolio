@@ -1,0 +1,32 @@
+/* 
+teal #81e0e0
+yellow #ffffe0 
+*/
+
+html {}
+body {
+	background-color: #fff;
+	font-family: 'Droid Sans', sans-serif;
+}
+
+p {
+ 	font-size: 15px;
+}
+
+.main-content {
+
+}
+
+nav {
+	background-color: #000;
+}
+
+.site-bar {
+	background-color: #000;
+	height: 50px;
+}
+
+.site-bar a {
+	color: #fff;
+	margin: 0 10px;
+}
