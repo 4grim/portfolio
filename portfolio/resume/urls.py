@@ -1,8 +1,9 @@
 from django.conf.urls import patterns, url
 
-from resume import views
+from resume.views import index, cv
 
 
 urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
+    url(r'^$', index, name='index'),
+    url(r'^resume/$', cv, name='resume'),
 )
