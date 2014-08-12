@@ -15,3 +15,7 @@ def cv(request):
 		'technologies': technologies,
 	}
 	return render(request, 'resume/cv.html', context)
+
+def project_index(request):
+	context = {}
+	return render(request, 'resume/project_index.html', context)
