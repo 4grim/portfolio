@@ -18,6 +18,8 @@ p {
 }
 
 .main-content {
+	position: relative;
+	top: 50px;
 
 }
 
@@ -46,10 +48,9 @@ footer {
 }
 
 .intro {
-	position: relative;
-	top: 50px;
 	margin: 1.5em 0;
 }
+
 .profile-image {
 	position: relative;
 	height: 150px;
@@ -67,9 +68,7 @@ footer {
 }
 
 .directory {
-	position: relative;
 	margin: 1.5em 0;
-	top: 50px;
 }
 
 .index-block {
