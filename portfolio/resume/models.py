@@ -18,8 +18,8 @@ class Industry(models.Model):
 class Client(models.Model):
 	name = models.CharField(max_length=200)
 	website = models.URLField()
-	email = models.EmailField(max_length=254)
-	contact_person = models.CharField(max_length=200)
+	email = models.EmailField(max_length=254, blank=True)
+	contact_person = models.CharField(max_length=200, blank=True)
 	industries = models.ManyToManyField(Industry)
 
 	def __unicode__(self):
