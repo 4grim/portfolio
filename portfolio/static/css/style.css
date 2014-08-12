@@ -127,11 +127,12 @@ footer p {
 	list-style: none;
 	float: right;
 	position: relative;
-	top: -30px;
+	top: -36px;
 }
 
 .nav-footer li {
 	display: inline;
+	margin: 0 15px;
 }
 
 .nav-footer a {
