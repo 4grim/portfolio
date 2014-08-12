@@ -1,5 +1,9 @@
 *.pyc
 
+collected_static/
+
+db.sqlite3
+
 # Compiled source #
 ###################
 *.com
