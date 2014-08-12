@@ -4,6 +4,24 @@
 
 {% block content_block %}
 <div class="row main-content">
-	
+	<div class="small-6 columns">
+		Amber Grimaldi
+		<button class="download-cv">Download CV</button>
+	</div>
+	<div class="small-6 columns">
+		<p class="techs">
+		{% for tech in technologies %}
+			{{ tech }}
+		{% endfor %}</p>
+	</div>
+	<div class="small-12 columns">
+		{% for project in projects %}
+			<h3>{{ project.title }}</h3>
+			<p>{{ project.position }}</p>
+			<p>{{ project.start_date }} - {{ project.end_date }}<p>
+			<p>{{ project.client }}</p>
+			<p>{{ project.description }}</p>
+		{% endfor %}
+	</div>
 </div>
 {% endblock %}

@@ -20,7 +20,7 @@ p {
 .main-content {
 	position: relative;
 	top: 50px;
-
+	margin-bottom: 50px;
 }
 
 nav, footer{
@@ -40,11 +40,14 @@ footer {
 	z-index: 2;
 	width: 100%;
 	font-size: 22px;
+	padding-top: 2px;
 }
 
-.site-bar a {
+.site-bar span {
 	color: #fafafa;
-	margin: 0 10px;
+	margin: 0 20px;
+	position: relative;
+	top: 2px;
 }
 
 .intro {
@@ -114,6 +117,7 @@ footer {
 .contact:hover, .contact:focus {
 	background-color: #8108ff;
 }
+
 
 footer p {
 	position: relative;
