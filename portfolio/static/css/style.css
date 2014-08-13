@@ -119,6 +119,18 @@ footer {
 	color: #6ab6ff;
 }
 
+.project-title:hover, .project-title:focus {
+	color: #0886ff;
+}
+
+.project-subtitle {
+	color: #72e000;
+}
+
+.project-subtitle:hover, .project-subtitle:focus {
+	color: #35cc00;
+}
+
 .edu-title {
 	margin-bottom: 0;
 	color: #9f43ff;
