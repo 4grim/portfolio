@@ -98,19 +98,22 @@ footer {
 
 .download-cv {
 	background-color: #dddddd;
-	border-width: 1px;
-	border-style: solid;
-	border-color: #cacaca;
+	border: #cacaca solid 1px;
 	padding: 2px 10px;
 	font-size: 16px;
 	position: relative;
 	top: -5px;
+	color: #000000;
+	transition: background-color 300ms ease-out;
+	display: inline-block;
 }
 
 @media (min-width: 641px) {.download-cv {top: -10px; font-size: 18px; padding: 4px 10px;}}
 
 .download-cv:focus, .download-cv:hover {
 	background-color: #ffb36a;
+	color: #fff;
+	border: #ffa956 solid 1px;
 }
 
 .cv-subtitle {
