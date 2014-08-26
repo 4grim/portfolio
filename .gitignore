@@ -1,8 +1,10 @@
+local_settings.py
+*.sqlite3
+*.db
+staticfiles/
+*.pot
 *.pyc
-
-collected_static/
-
-db.sqlite3
+env
 
 # Compiled source #
 ###################

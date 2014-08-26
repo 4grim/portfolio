@@ -1,0 +1,219 @@
+/* 
+teal #81e0e0
+yellow #ffffe0 
+*/
+
+html {
+	height: 100%;
+}
+body {
+	background-color: #fff;
+	font-family: 'Droid Sans', sans-serif;
+	position: relative;
+	height: 100%;
+}
+
+p {
+ 	font-size: 15px;
+}
+
+.main-content {
+	position: relative;
+	top: 50px;
+	margin-bottom: 50px;
+}
+
+@media (min-width: 600px) {.main-content {padding-left: 30px; padding-right: 30px;}}
+
+nav, footer{
+	color: #fafafa;
+	background-color: #707070;
+	height: 50px;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+
+.intro {
+	padding-top: 30px;
+}
+
+.site-bar {
+	position: fixed;
+	z-index: 2;
+	width: 100%;
+	font-size: 22px;
+	padding-top: 2px;
+}
+
+.site-bar span {
+	color: #fafafa;
+	margin: 0 20px;
+	position: relative;
+	top: 2px;
+}
+
+.profile-image {
+	position: relative;
+	height: 150px;
+	width: 150px;
+	border-radius: 75px;
+	clear: both;
+	margin-right: 1em;
+	vertical-align: middle;
+	float: left;
+}
+
+.profile-description {
+	position: relative;
+	height: 100%;
+}
+
+.directory {
+	margin: 1.5em 0;
+}
+
+.index-block {
+	height: 175px;
+	position: relative;
+	border-style: solid;
+	border-color: #fafafa;
+	border-width: 1px;
+	width: 100%;
+	margin: 1.5em 0;
+	font-size: 28px;
+	padding: 0;
+	color: #474747;
+}
+
+.cv {
+	background-color: #ffb36a;
+}
+.cv:hover, .cv:focus {
+	background-color: #ff8108;
+}
+
+.download-cv {
+	background-color: #dddddd;
+	border: #cacaca solid 1px;
+	padding: 2px 10px;
+	font-size: 16px;
+	position: relative;
+	top: -5px;
+	color: #000000;
+	transition: background-color 300ms ease-out;
+	display: inline-block;
+}
+
+@media (min-width: 641px) {.download-cv {top: -10px; font-size: 18px; padding: 4px 10px;}}
+
+.download-cv:focus, .download-cv:hover {
+	background-color: #ffb36a;
+	color: #fff;
+	border: #ffa956 solid 1px;
+}
+
+.cv-subtitle {
+	color: #ffbd7e;
+	text-align: center;
+}
+
+.project-title {
+	color: #6ab6ff;
+}
+
+.project-title:hover, .project-title:focus {
+	color: #0886ff;
+}
+
+.project-subtitle {
+	color: #72e000;
+}
+
+.project-subtitle:hover, .project-subtitle:focus {
+	color: #35cc00;
+}
+
+.edu-title {
+	margin-bottom: 0;
+	color: #9f43ff;
+}
+.edu-subtitle {
+	font-style: italic;
+	margin-left: 20px;
+	margin-bottom: 0;
+}
+.edu-institute {
+	margin-left: 20px;
+	padding: 0;
+}
+
+
+.projects {
+	background-color: #6ab6ff;
+}
+
+.projects:hover, .projects:focus {
+	background-color: #0886ff;
+}
+
+.project-list {
+	list-style: none;
+}
+
+.blog {
+	background-color: #b6ff6a;
+}
+
+.blog:hover, .blog:focus {
+	background-color: #86ff08
+}
+
+.contact {
+	background-color: #b36aff;
+}
+
+.contact:hover, .contact:focus {
+	background-color: #8108ff;
+}
+
+
+footer p {
+	position: relative;
+	top: 15px;
+}
+.nav-footer {
+	list-style: none;
+	float: right;
+	position: relative;
+	top: -36px;
+}
+
+.nav-footer li {
+	display: inline;
+	margin: 0 15px;
+}
+
+.nav-footer a {
+	color: #fafafa;
+}
+
+.blog-hero {
+	height: 250px;
+	background-color: #e7e7e7;
+	border: #d3d3d3 1px solid;
+	border-bottom: none;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+.blog-content {
+	border: #d3d3d3 1px solid;
+	border-top: none;
+	border-bottom: none;
+	padding-top: 1.5em;
+	padding-bottom: 1.5em;
+}
