@@ -96,7 +96,7 @@ USE_TZ = False
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 ) 
-STATIC_URL = '/static/'
+STATIC_URL = '/STATIC/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'collected_static')
 
 # Media files
