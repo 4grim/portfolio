@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Amber Grimaldi</title>
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/bow_000.png' %}">
+		<meta http-equiv="Content-type" content="text/html" charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/foundation.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/foundation.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/normalize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		{% block extra_head %}
+		{% endblock %}
+	</head>
+	<body>
+		<div class="hero">
+			{% block hero_block %}
+				<div class="row">
+					<div class="12-small small-centered medium-7 large-6 columns text-center">
+						<div class="id">
+							<img class="id-picture" src="{% static 'img/amber-summer2014.jpg' %}"> </img>
+							<h1 class="id-name">Amber Grimaldi</h1>
+						</div>
+						<div class="description">
+							<p class="hero-subhead">Hello! I do web development.</p>
+						</div>
+						<div class="social-links">
+							<a href="https://github.com/4grim"><img src="{% static 'img/Github.png' %}" /></a>
+							<a href="https://www.linkedin.com/in/ambergrimaldi"><img src="{% static 'img/LinkedIN.png' %}" /></a>
+							<a href="https://twitter.com/4grim"><img src="{% static 'img/Twitter.png' %}" /></a>
+							<img src="{% static 'img/Mail.png' %}" />
+						</div>
+					</div>
+				</div>
+				<nav>
+					<ul>
+						<li><a class="nav-link" href="{% url 'blog_index' %}">BLOG</a></li>
+						<li><a class="nav-link" href="{% url 'resume' %}">RESUME</a></li>
+						<li><a class="nav-link" href="{% url 'index' %}">PROJECTS</a></li>
+					</ul>
+				</nav>
+			{% endblock %}
+		</div>
+		<div class="content">
+			{% block content_block %}
+			{% endblock %}
+		</div>
+		<footer>
+			<div class="row">
+				<div class="small-12 columns">
+					<!-- footer space -->
+				</div>
+			</div>
+		</footer>
+		<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>
