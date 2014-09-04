@@ -1,0 +1,19 @@
+{% extends 'base2.html' %}
+
+{% load static %}
+
+{% block content_block %}
+<div class="row no-margin">
+	<div class="12-small columns no-padding">
+		<div class="project">
+			<img src="{% static 'img/fashatude.png' %}" />
+		</div>
+		<div class="project">
+			<img src="{% static 'img/asyncio.png' %}" />
+		</div>
+		<div class="project">
+			<img src="{% static 'img/fizzmint.png' %}" />
+		</div>
+	</div>
+</div>
+{% endblock %}
