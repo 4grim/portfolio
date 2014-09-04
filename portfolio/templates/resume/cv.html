@@ -2,6 +2,14 @@
 
 {% load staticfiles %}
 
+{% block extra_head %}
+	<script type="text/javascript">
+		var techs = {{ technologies }};
+		var project_techs = {{ project.technologies }};
+		console.log(techs);
+	</script>
+{% endblock %}
+
 {% block content_block %}
 <div class="row main-content">
 	<div class="small-12 text-center columns">

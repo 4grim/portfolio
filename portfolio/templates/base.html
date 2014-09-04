@@ -13,6 +13,8 @@
 		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/normalize.css' %}">
 		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		{% block extra_head %}
+		{% endblock %}
 	</head>
 	<body>
 		<nav class="site-bar">
@@ -30,7 +32,7 @@
 		<footer>
 			<div class="row">
 				<div class="small-12 columns">
-					<p>&copy {% now "Y"%}</p>
+					<p>&copy; {% now "Y"%}</p>
 					<ul class="nav-footer">
 						<li><a href="https://github.com/4grim"><img src="{% static 'img/github_fff_35x35.png' %}"></a></li>
 						<li><a href="https://twitter.com/4grim"><img src="{% static 'img/twitter_fff_height35.png' %}"></a></li>
@@ -39,5 +41,6 @@
 				</div>
 			</div>
 		</footer>
+		<script src="{% static 'js/script.js' %}"></script>
 	</body>
 </html>
