@@ -5,6 +5,7 @@ staticfiles/
 *.pot
 *.pyc
 env
+collected_static/
 
 # Compiled source #
 ###################
