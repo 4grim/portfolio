@@ -96,12 +96,3 @@ nav > ul > li {
 	color: #dededc;
 	background-color: #59594C;
 }
-.project {
-	width: 100%;
-	display: block;
-	border-bottom: #4C5959 1px solid;
-}
-.project img {
-	width: 100%;
-	height: auto;
-}
