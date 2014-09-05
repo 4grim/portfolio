@@ -3,7 +3,10 @@ from resume.models import Technology, Industry, Client, Project, ProjectImage
 
 
 def index(request):
-	context = {}
+	projects = Project.objects.order_by('-start_date')
+	context = {
+		'projects': projects,
+	}
 	return render(request, 'project_index.html', context)
 
 def cv(request):
@@ -15,3 +18,7 @@ def cv(request):
 		'technologies': technologies,
 	}
 	return render(request, 'resume/cv.html', context)
+
+def project_page(request, title):
+	context= {}
+	return render(request, 'resume/project_page.html', context)

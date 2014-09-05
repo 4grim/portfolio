@@ -3,17 +3,21 @@
 {% load static %}
 
 {% block content_block %}
-<div class="row no-margin">
-	<div class="12-small columns no-padding">
-		<div class="project">
-			<img src="{% static 'img/fashatude.png' %}" />
-		</div>
-		<div class="project">
-			<img src="{% static 'img/asyncio.png' %}" />
-		</div>
-		<div class="project">
-			<img src="{% static 'img/fizzmint.png' %}" />
-		</div>
+	{% for project in projects %}
+		{% for image in project.images.all %}
+			{% if image.feature %}
+				<img src="{{ image.image.url }}" />
+			{% endif %}
+		{% endfor %}
+	{% endfor %}
+
+	<div class="project">
+		<a href=""><img src="{% static 'img/fashatude.png' %}" /></a>
 	</div>
-</div>
+	<div class="project">
+		<a href=""><img src="{% static 'img/asyncio.png' %}" /></a>
+	</div>
+	<div class="project">
+		<a href=""><img src="{% static 'img/fizzmint.png' %}" /></a>
+	</div>
 {% endblock %}
