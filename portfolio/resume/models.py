@@ -30,10 +30,10 @@ class ProjectImage(models.Model):
 	title = models.CharField(max_length=200)
 	description = models.TextField(blank=True)
 	image = models.ImageField(upload_to='resume')
+	feature = models.BooleanField(default=False)
 
 	def __unicode__(self):
 		return self.title
-
 
 class Project(models.Model):
 	title = models.CharField(max_length=200)
