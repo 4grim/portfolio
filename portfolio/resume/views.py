@@ -20,5 +20,8 @@ def cv(request):
 	return render(request, 'resume/cv.html', context)
 
 def project_page(request, title):
-	context= {}
+	project = Project.objects.get(title=title)
+	context = {
+		'project': project
+	}
 	return render(request, 'resume/project_page.html', context)

@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block hero_block %}
+	{% for image in project.images.all %}
+		{% if image.feature %}
+			<img src="{{ image.image.url }}" />
+		{% endif %}
+	{% endfor %}
+{% endblock %}
+
+{% block content_block %}
+	<div class="row">
+		<div class="small-12 medium-10 medium-centered large-12 columns project">
+			<h2>{{ project.position }}</h2> 
+			<p>{{ project.start_date|date:'M Y' }} - {{ project.end_date|date:'M Y' }}</p>
+
+			<p>{{ project.description }}</p>
+
+			<div class="row">
+				<div class="small-5 columns">
+					{% if project.technologies %}<span class="project-subhead">Skills enhanced during this project:</span>{% endif %}
+				</div>
+				<div class="small-7 columns">
+					{% for tech in project.technologies.all %}
+						{{ tech }}{% if not forloop.last %}, {% endif %}
+					{% endfor %}
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-5 columns">
+					<span class="project-subhead">Client:</span>
+				</div>
+				<div class="small-7 columns">
+					<a href="{{ project.client.website }}">{{ project.client }}</a>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="small-5 columns">
+					{% if project.client.industries %}<span class="project-subhead">Industry Focus:</span>{% endif %} 
+				</div>
+				<div class="small-7 columns">
+					{% for industry in project.client.industries.all %}
+						{{ industry }}{% if not forloop.last %}, {% endif %}
+					{% endfor %}
+				</div>
+			</div>
+
+			{% for image in project.images.all %}
+				{% if image.feature == False %}
+					<img src="{{ image.image.url }}">
+				{% endif%}
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}

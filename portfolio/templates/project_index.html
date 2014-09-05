@@ -1,4 +1,4 @@
-{% extends 'base2.html' %}
+{% extends 'base.html' %}
 
 {% load static %}
 
@@ -6,7 +6,7 @@
 	{% for project in projects %}
 		{% for image in project.images.all %}
 			{% if image.feature %}
-				<a href=""><img src="{{ image.image.url }}" /></a>
+				<a href="{% url 'project_page' project %}"><img src="{{ image.image.url }}" /></a>
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
