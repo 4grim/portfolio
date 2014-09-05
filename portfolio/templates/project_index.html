@@ -6,18 +6,8 @@
 	{% for project in projects %}
 		{% for image in project.images.all %}
 			{% if image.feature %}
-				<img src="{{ image.image.url }}" />
+				<a href=""><img src="{{ image.image.url }}" /></a>
 			{% endif %}
 		{% endfor %}
 	{% endfor %}
-
-	<div class="project">
-		<a href=""><img src="{% static 'img/fashatude.png' %}" /></a>
-	</div>
-	<div class="project">
-		<a href=""><img src="{% static 'img/asyncio.png' %}" /></a>
-	</div>
-	<div class="project">
-		<a href=""><img src="{% static 'img/fizzmint.png' %}" /></a>
-	</div>
 {% endblock %}
