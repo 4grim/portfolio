@@ -3,13 +3,27 @@
 {% load staticfiles %}
 
 {% block content_block %}
-<div class="row main-content">
-	<div class="small-12 columns blog-hero text-center">
+<div class="row">
+	<div class="small-12 columns text-center">
 		<h2>Inconcievable.</h2>
-		<p>Stuff on cooking, coding and camping (and maybe some other stuff mixed in).</p>
+		<p>Stuff on cooking, coding and the outdoors. (DISCLAIMER: there may be some other stuff mixed in).</p>
 	</div>
-	<div class="small-12 columns blog-content">
-		This is the blog index
+	<div class="small-12 medium-10 large-9 columns">
+		<ul class="blog-index-list">
+			{% for post in posts %}
+				<li>
+					<h3><a href="{{ post.slug }}">{{ post }}</a></h3>
+					<p class="blog-index-subhead">( {{ post.post_date|date:'M j, Y' }} )</p>
+					<p class="blog-index-subhead">{{ post.subtitle }}</p>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+	<div class="small-12 medium-2 large-3 columns">
+		doop
+		{% if posts.categories.all %}
+			poop
+		{% endif %}
 	</div>
 </div>
 {% endblock %}

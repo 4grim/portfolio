@@ -31,10 +31,14 @@ class BlogPost(models.Model):
 	title = models.CharField(max_length=200)
 	subtitle = models.TextField(max_length=500, blank=True)
 	post_date = models.DateTimeField()
-	published = models.BooleanField(default=False)
 	text = models.TextField()
 	slug = models.SlugField(unique=True)
 	categories = models.ManyToManyField(Category, blank=True)
 	images = models.ManyToManyField(BlogPostImage, blank=True)
 	files = models.ManyToManyField(BlogPostFile, blank=True)
+
+	def __unicode__(self):
+		return self.title
+
+
 
