@@ -112,3 +112,25 @@ nav > ul > li {
 	font-weight: 700;
 	color: #333333;
 }
+.project-image {
+	width: 100%;
+	display: inline-block;
+	margin: 10px;
+	box-shadow: 2px 2px 2px #afafaf;
+	max-width: 275px;
+}
+.project-image:hover,
+.project-image:focus {
+	box-shadow: 3px 3px 4px #ccc;
+}
+.blog-index-list {
+	list-style: none;
+}
+.blog-index-subhead {
+	margin: 0;
+	padding: 0;
+	margin-left: 30px;
+	font-weight: 400;
+	font-style: italic;
+
+}
