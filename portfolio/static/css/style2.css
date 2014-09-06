@@ -100,13 +100,14 @@ nav > ul > li {
 .nav-link:hover,
 .nav-link:focus {
 	color: #dededc;
+	background-color: #3a4444;
+}
+.nav-link:active {
 	background-color: #59594C;
 }
-
 .project {
 	margin: 2em 0;
 }
-
 .project-subhead {
 	font-weight: 700;
 	color: #333333;
