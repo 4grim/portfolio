@@ -8,3 +8,11 @@ $( document ).ready(function() {
 	});
 });
 // End Main Site Navigation Highlighting for Page
+
+// Project Image Height Generator
+$( document ).ready(function() {
+    var img = $('.project-image');
+    var width = $(img).css('width');
+    $(img).css('height', width);
+})
+// End Project Image Height Generator
