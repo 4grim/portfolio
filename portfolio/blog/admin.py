@@ -12,8 +12,11 @@ class BlogPostImageAdmin(admin.ModelAdmin):
 class BlogPostFileAdmin(admin.ModelAdmin):
 	prepopulated_fields = {"slug": ("title",)}
 
+class CategoryAdmin(admin.ModelAdmin):
+	prepopulated_fields = {"slug": ("title",)}
+
 
 admin.site.register(BlogPost, BlogPostAdmin)
 admin.site.register(BlogPostImage, BlogPostImageAdmin)
 admin.site.register(BlogPostFile, BlogPostFileAdmin)
-admin.site.register(Category)
+admin.site.register(Category, CategoryAdmin)

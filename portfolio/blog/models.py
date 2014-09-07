@@ -3,13 +3,14 @@ from django.db import models
 
 class Category(models.Model):
 	title = models.CharField(max_length=200)
+	slug = models.SlugField(unique=True)
 
 	def __unicode__(self):
 		return self.title
 
 class BlogPostImage(models.Model):
 	title = models.CharField(max_length=200)
-	slug = models.SlugField(unique=True, default='default')
+	slug = models.SlugField(unique=True)
 	image = models.ImageField(upload_to='blog', blank=True)
 	feature_image = models.BooleanField(default=False)
 
@@ -20,7 +21,7 @@ class BlogPostImage(models.Model):
 class BlogPostFile(models.Model):
 	title = models.CharField(max_length=200)
 	description = models.TextField(blank=True)
-	slug = models.SlugField(unique=True, default='default')
+	slug = models.SlugField(unique=True)
 	entry_file = models.FileField(upload_to='blog', blank=True)
 
 	def __unicode__(self):

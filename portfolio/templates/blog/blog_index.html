@@ -12,7 +12,7 @@
 		<ul class="blog-index-list">
 			{% for post in posts %}
 				<li>
-					<h3><a href="{{ post.slug }}">{{ post }}</a></h3>
+					<h3><a href="{% url 'blog_post' post.slug %}">{{ post }}</a></h3>
 					<p class="blog-index-subhead">( {{ post.post_date|date:'M j, Y' }} )</p>
 					<p class="blog-index-subhead">{{ post.subtitle }}</p>
 				</li>
@@ -20,10 +20,16 @@
 		</ul>
 	</div>
 	<div class="small-12 medium-2 large-3 columns">
-		doop
-		{% if posts.categories.all %}
-			poop
-		{% endif %}
+		<ul class="blog-category-list">
+			{% if categories %}
+				<h4>Categories</h4>
+				<ul>
+					{% for category in categories %}
+						<a href="{% url 'blog_category_index' category.slug %}"><li>{{ category }}</li></a>
+					{% endfor %}
+				</ul>
+			{% endif %}
+		</ul>
 	</div>
 </div>
 {% endblock %}

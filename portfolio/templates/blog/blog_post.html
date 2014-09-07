@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% load staticfiles %}
+
+{% block content_block %}
+<div class="row">
+	<div class="small-12 small-centered medium-10 large-8 columns">
+		<h2>{{ post.title }}</h2>
+		<p>{{ post.post_date|date:'M j, Y' }}</p>
+		<p>{{ post.subtitle }}</p>
+		{% if post.images.all %}
+			{% for image in post.images.all %}
+				{% if image.feature_image %}
+					<img src="{{ image.image.url }}" />
+				{% endif %}
+			{% endfor %}
+		{% endif %}
+		<img src="{{ post.images.image.}}">
+	</div>
+</div>
+{% endblock %}
