@@ -17,6 +17,9 @@
  a:hover {
  	color: #66a16f;
  }
+ ul {
+ 	margin: 0 0 0 15px;
+ }
  nav {
  	display: inline;
  	margin: 0;
@@ -132,5 +135,25 @@ nav > ul > li {
 	margin-left: 30px;
 	font-weight: 400;
 	font-style: italic;
-
+}
+.blog-category-title {
+	color: #487ed3;
+}
+.blog-feature-image {
+	margin: 1em 0;
+}
+.blog-category-list {
+	margin: 0 0 -15px 0;
+}
+.post-category-list {
+	margin: -10px 0;
+}
+.post-category {
+	font-style: italic;
+}
+.blog-sidebar {
+	margin: 1.5em 0;
+}
+.blog-content {
+	margin: 1.5em 0;
 }

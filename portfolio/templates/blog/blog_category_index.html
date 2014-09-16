@@ -1,7 +1,28 @@
-{% extends 'base.html' %}
+{% extends 'blog/blog_index.html' %}
 
 {% load staticfiles %}
 
-{% block content_block %}
-	this is the blog category index
+{% block blog_content_block %}
+<div class="row">
+	<div class="small-12 medium-10 large-9 columns">
+		<h3 class="blog-category-title">Blogs on {{ category }}</h3>
+		{% if category_posts %}
+			<ul class="blog-index-list">
+				{% for post in category_posts %}
+					<li>
+						<h3><a href="{% url 'blog_post' post.slug %}">{{ post }}</a></h3>
+						<p class="blog-index-subhead">( {{ post.post_date|date:'M j, Y' }} )</p>
+						<p class="blog-index-subhead">{{ post.subtitle }}</p>
+					</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<div class="row">
+				<div class="small-12 columns text-center">
+					<h4>Unfortunately there are no posts in this category yet. Feel free to email me in the link above with any requests.</h4>
+				</div>
+			</div>
+		{% endif %}
+	</div>
+</div>
 {% endblock %}

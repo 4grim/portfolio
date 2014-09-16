@@ -1,21 +1,38 @@
-{% extends 'base.html' %}
+{% extends 'blog/blog_index.html' %}
 
 {% load staticfiles %}
 
-{% block content_block %}
-<div class="row">
-	<div class="small-12 small-centered medium-10 large-8 columns">
-		<h2>{{ post.title }}</h2>
-		<p>{{ post.post_date|date:'M j, Y' }}</p>
-		<p>{{ post.subtitle }}</p>
-		{% if post.images.all %}
-			{% for image in post.images.all %}
-				{% if image.feature_image %}
-					<img src="{{ image.image.url }}" />
-				{% endif %}
+{% block blog_content_block %}
+	<h2>{{ post.title }}</h2>
+	<p>{{ post.post_date|date:'M j, Y' }}</p>
+	<p>{{ post.subtitle }}</p>
+	<div class="post-category-list">
+		{% if post.categories.all %}
+			<p>Categories:
+			{% for category in post.categories.all %}
+				<span class="post-category"><a href="{% url 'blog_category_index' category.slug %}">{{ category }}</a>{% if not forloop.last %}, {% endif %}</span>
 			{% endfor %}
+			</p>
 		{% endif %}
-		<img src="{{ post.images.image.}}">
 	</div>
-</div>
+	{% if post.images.all %}
+		{% for image in post.images.all %}
+			{% if image.feature_image %}
+				<img class="blog-feature-image" src="{{ image.image.url }}" />
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+	<p>{{ post.text }}</p>
+	{% if post.images.all %}
+		{% for image in post.images.all %}
+			{% if not image.feature_image %}
+				<img src="{{ image.image.url }}" />
+			{% endif %}
+		{% endfor %}
+	{% endif %}
+	{% if post.files.all %}
+		{% for file in post.filess.all %}
+			<img src="{{ file.entry_file.url }}" />
+		{% endfor %}
+	{% endif %}
 {% endblock %}
