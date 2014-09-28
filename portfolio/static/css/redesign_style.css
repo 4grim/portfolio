@@ -11,9 +11,23 @@
 .content-margin {
 	margin: 15px 30px;
 }
+.page-wrapper {
+	position: relative;
+	overflow: auto;
+	clear: both;
+}
 .nav-bar {
 	background-color: rgb(255,135,79);
 	height: 100%;
+	width: 200px;
+	float: left;
+	position: relative;
+}
+.main-content {
+	float: left;
+	margin-left: 200px;
+	overflow: hidden;
+	position: relative;
 }
 .intro {
 	color: #ffffff;
@@ -34,8 +48,11 @@
  	font-size: 1.75em;
  	padding: 5px 30px;
  }
+ .social-links {
+ 	width: 30%;
+ }
  .social-links img {
  	width: 50px;
  	height: 50px;
- 	margin: 0 3.98%;
+ 	margin: 0 10px;
  }
