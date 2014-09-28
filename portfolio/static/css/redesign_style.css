@@ -1,0 +1,41 @@
+ html {
+ 	font-size: 15px;
+ }
+ body {
+ 	font-size: 15px;
+ 	background-color: #fbfffc;
+ }
+.no-padding {
+	padding: 0;
+}
+.content-margin {
+	margin: 15px 30px;
+}
+.nav-bar {
+	background-color: rgb(255,135,79);
+	height: 100%;
+}
+.intro {
+	color: #ffffff;
+	font-size: 1.25em;
+	font-weight: 200;
+	margin: .5em 0;
+}
+ .nav-links {
+ 	list-style: none;
+ 	margin-left: 0;
+ 	border-collapse: collapse;
+ }
+ .nav-links li {
+ 	background-color: rgb(255,202,177);
+ 	border-bottom: 1px solid rgb(255,175,138);
+ 	border-top: none;
+ 	color: #ffffff;
+ 	font-size: 1.75em;
+ 	padding: 5px 30px;
+ }
+ .social-links img {
+ 	width: 50px;
+ 	height: 50px;
+ 	margin: 0 3.98%;
+ }

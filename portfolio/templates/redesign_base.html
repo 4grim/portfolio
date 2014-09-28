@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+
+{% load staticfiles %}
+
+<html>
+	<head>
+		<title>Amber Grimaldi{% block subtitle %}{% endblock %}</title>
+		<link rel="shortcut icon" type="image/png" href="{% static 'img/bow_000.png' %}">
+		<meta http-equiv="Content-type" content="text/html" charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/foundation.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/foundation.min.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'foundation/css/normalize.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/redesign_style.css' %}">
+		<!--<link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}"> -->
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+		{% block extra_head %}
+		{% endblock %}
+	</head>
+	<body>
+		<div class="1-small medium-3 columns no-padding nav-bar">
+			<div class="content-margin">
+				<p class="intro">I'm Amber Grimaldi, a web &amp; application developer.</p>
+			</div>
+			<ul class="nav-links">
+				<a href="{% url 'index' %}"><li>PROJECTS</li></a>
+				<a href="{% url 'blog_index' %}"><li>BLOG</li></a>
+				<a href="{% static 'img/Resume_09112014.pdf' %}" target="_blank"><li>RESUME</li></a>
+				<a href="mailto:amber@ambergrimaldi.com?Subject=Hi%20there!"><li>CONTACT</li></a>
+			</ul>
+			<div class="content-margin">
+				<a class="social-links" href="https://github.com/4grim"><img src="{% static 'img/Github.png' %}" /></a>
+				<a class="social-links" href="https://www.linkedin.com/in/ambergrimaldi"><img src="{% static 'img/LinkedIN.png' %}" /></a>
+				<a class="social-links" href="https://twitter.com/4grim"><img src="{% static 'img/Twitter.png' %}" /></a>
+			</div>
+		</div>
+		<div class="11-small medium-9 columns main-content">
+			{% block content_block %}
+			{% endblock %}
+		</div>
+		<footer>
+			<div class="small-12 columns">
+				<p>&copy; Amber Grimaldi {% now 'Y'%}</p>
+			</div>
+		</footer>
+		<script src="{% static 'js/jquery-2.1.1.min.js' %}"></script>
+		<script src="{% static 'js/script.js' %}"></script>
+	</body>
+</html>
