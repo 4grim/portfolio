@@ -2,19 +2,23 @@
 	// On load
 	$( document ).ready(function() {
 		var pageWidth = $( document ).width();
-		console.log(pageWidth);
 		var contentWidth = pageWidth - 260;
-		console.log(contentWidth);
-		$( "#main-content" ).css( "width", contentWidth );
+		var heroWidth = pageWidth - 200;
+		if ( document.getElementById( "hero" ) ) {
+			$( "#hero" ).css( "width", heroWidth );
+		}
+		$( "#content-margin" ).css( "width", contentWidth );
 	})
 
 	// On resize
 	$(window).resize(function() {
 		var pageWidth = $( document ).width();
-		console.log(pageWidth);
 		var contentWidth = pageWidth - 260;
-		console.log(contentWidth);
-		$( "#main-content" ).css( "width", contentWidth );
+		var heroWidth = pageWidth - 200;
+		if ( document.getElementById( "hero" ) ) {
+			$( "#hero" ).css( "width", heroWidth );
+		}
+		$( "#content-margin" ).css( "width", contentWidth );
 	});
 // End Content Width Setting
 

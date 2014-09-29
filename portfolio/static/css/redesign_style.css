@@ -25,7 +25,6 @@
 }
 .main-content {
 	float: left;
-	margin-left: 200px;
 	overflow: hidden;
 	position: relative;
 }
@@ -47,6 +46,12 @@
  	color: #ffffff;
  	font-size: 1.75em;
  	padding: 5px 30px;
+ 	-webkit-transition: background-color .75s;
+ 	transition: background-color .75s;
+ }
+ .nav-links li:focus,
+ .nav-links li:hover {
+ 	background-color: #ffa77e;
  }
  .social-links {
  	width: 30%;
@@ -54,5 +59,9 @@
  .social-links img {
  	width: 50px;
  	height: 50px;
- 	margin: 0 10px;
+ 	margin: 0 0 15px 10px;
+ }
+
+ .blog-hero {
+ 	background-color: #ccc;
  }

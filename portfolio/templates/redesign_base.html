@@ -18,7 +18,7 @@
 		{% endblock %}
 	</head>
 	<body>
-		<div class="page-wrapper">
+		<div id="page-wrapper" class="page-wrapper">
 			<div class="no-padding nav-bar">
 				<div class="content-margin">
 					<p class="intro">I'm Amber Grimaldi, a web &amp; application developer.</p>
@@ -29,19 +29,19 @@
 					<a href="{% static 'img/Resume_09112014.pdf' %}" target="_blank"><li>RESUME</li></a>
 					<a href="mailto:amber@ambergrimaldi.com?Subject=Hi%20there!"><li>CONTACT</li></a>
 				</ul>
-				<div class="content-margin">
+				<div>
 					<a class="social-links" href="https://github.com/4grim"><img src="{% static 'img/Github.png' %}" /></a>
 					<a class="social-links" href="https://www.linkedin.com/in/ambergrimaldi"><img src="{% static 'img/LinkedIN.png' %}" /></a>
 					<a class="social-links" href="https://twitter.com/4grim"><img src="{% static 'img/Twitter.png' %}" /></a>
 				</div>
 			</div>
-			<div class="main-content no-padding">
+			<div id="main-content" class="main-content no-padding">
 				{% block content_block %}
 				{% endblock %}
 			</div>
 			<footer>
 				<div class="small-12 columns">
-					<p>&copy; Amber Grimaldi {% now 'Y'%}</p>
+					<p>&copy; Amber Grimaldi {% now 'Y' %}</p>
 				</div>
 			</footer>
 		</div>
