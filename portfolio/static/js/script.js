@@ -1,13 +1,22 @@
-// Main Site Navigation Highlighting for Page
-$( document ).ready(function() {
-	var pathnames = location.pathname;
-	$('a.nav-link').each(function(i, o){ 
-		if ($(o).attr('href') == pathnames) {
-			$(o).css('background-color', '#59594C');
-		}
+// Content Width Setting
+	// On load
+	$( document ).ready(function() {
+		var pageWidth = $( document ).width();
+		console.log(pageWidth);
+		var contentWidth = pageWidth - 260;
+		console.log(contentWidth);
+		$( "#main-content" ).css( "width", contentWidth );
+	})
+
+	// On resize
+	$(window).resize(function() {
+		var pageWidth = $( document ).width();
+		console.log(pageWidth);
+		var contentWidth = pageWidth - 260;
+		console.log(contentWidth);
+		$( "#main-content" ).css( "width", contentWidth );
 	});
-});
-// End Main Site Navigation Highlighting for Page
+// End Content Width Setting
 
 // Project Image Height Generator
 $( document ).ready(function() {
