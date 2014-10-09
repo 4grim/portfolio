@@ -7,7 +7,7 @@ def index(request):
 	context = {
 		'projects': projects,
 	}
-	return render(request, 'project_index.html', context)
+	return render(request, 'index.html', context)
 
 def cv(request):
 	projects = Project.objects.order_by('-start_date')
