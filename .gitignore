@@ -6,6 +6,7 @@ staticfiles/
 *.pyc
 env
 collected_static/
+*.DS_Store
 
 # Compiled source #
 ###################
