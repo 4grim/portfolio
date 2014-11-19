@@ -41,7 +41,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     "django.core.context_processors.request",
     )
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['.ambergrimaldi.com']
 
 
 # Application definition
